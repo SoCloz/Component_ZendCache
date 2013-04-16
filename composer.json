@@ -1,0 +1,18 @@
+{
+    "name": "socloz/zend-cache",
+    "description": "provides a generic way to cache any data",
+    "license": "BSD-3-Clause",
+    "keywords": [
+        "zf",
+        "cache"
+    ],
+    "autoload": {
+        "psr-0": {
+            "Zend\\Cache\\": ""
+        }
+    },
+    "target-dir": "Zend/Cache",
+    "require": {
+        "php": ">=5.3.3"
+    }
+}
