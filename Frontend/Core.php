@@ -370,7 +370,9 @@ class Core implements Frontend
             // we need to serialize datas before storing them
             $data = serialize($data);
         } else {
-            if (!is_string($data)) {
+            if (!is_string($data)
+                && !(isset($this->_backendCapabilities['allow_unserialized_non_string_data'])
+                    && $this->_backendCapabilities['allow_unserialized_non_string_data']) ) {
                 Cache::throwException("Datas must be string or set automatic_serialization = true");
             }
         }
